@@ -27,7 +27,7 @@ tag @s[scores={convState=0},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" People really are not showing up to Frog Choir Practice, so I'm hanging these Frog Choir schedules on the notice boards. Maybe then people will start showing up on time.\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Les gens ne viennent pas vraiment aux répétitions de la chorale des grenouilles, alors j'affiche les horaires de la chorale des grenouilles sur les panneaux d'affichage. Peut-être qu'alors les gens commenceront à arriver à l'heure.\"}"}
 # execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################

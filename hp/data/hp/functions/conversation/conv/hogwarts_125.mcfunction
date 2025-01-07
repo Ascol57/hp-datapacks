@@ -27,7 +27,7 @@ tag @s[scores={convState=0},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" I heard the Weasley twins put Puking Pastilles in everyone's cauldrons in Potions class. I would have loved to see Professor Snape's face. \\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" J'ai entendu dire que les jumeaux Weasley avaient mis des pastilles à vomir dans les chaudrons de tout le monde pendant les cours de potions. J'aurais adoré voir le visage du professeur Rogue. \\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
