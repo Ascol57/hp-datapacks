@@ -28,7 +28,7 @@ tag @s[scores={convState=0},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"[{\"text\":\" Hello! Lemme introduce meself; I'm the keeper of keys and grounds at Hogwarts, \"},{\"text\":\"Rubeus Hagrid\",\"color\":\"gold\",\"bold\":\"true\"},{\"text\":\".\\n\\n\\n\\n\",\"color\":\"white\",\"bold\":\"false\"}]"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"[{\"text\":\" Bonjour ! Laissez-moi me présenter ; je suis le gardien des clés et des terrains de Poudlard, \"},{\"text\":\"Rubeus Hagrid\",\"color\":\"gold\",\"bold\":\"true\"},{\"text\":\".\\n\\n\\n\\n\",\"color\":\"white\",\"bold\":\"false\"}]"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -63,17 +63,17 @@ tag @s[scores={convState=1},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" How can I help yeh? \\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Comment puis-je vous aider ? \\n\"}"}
 # execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≤ Can I ask you something?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≤ Puis-je vous demander quelque chose ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 3
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≥ Take care\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≥ Prends soin de toi\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=2}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState -1
 #-------------------------------
 
@@ -97,29 +97,29 @@ tag @s[scores={convState=3},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Well, what do yeh want to ask?\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Eh bien, que veux-tu demander ?\\n\"}"}
 # execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≤ How did you wind up at Hogwarts?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≤ Comment es-tu arrivé à Poudlard ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 12
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≤ What do you know about You-Know-Who?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≤ Que savez-vous de Vous-Savez-Qui ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=2}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 5
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=3}] run data merge entity @s {CustomName:"{\"text\":\"≤ What are your tasks at the castle?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=3}] run data merge entity @s {CustomName:"{\"text\":\"≤ Quelles sont vos tâches au château ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=3}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 13
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=4}] run data merge entity @s {CustomName:"{\"text\":\"≤ How come you are so tall?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=4}] run data merge entity @s {CustomName:"{\"text\":\"≤ Comment se fait-il que tu sois si grand ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=4}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 14
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=5}] run data merge entity @s {CustomName:"{\"text\":\"≤ What house did you belong to?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=5}] run data merge entity @s {CustomName:"{\"text\":\"≤ À quelle maison appartenais-tu ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=5}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 4
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=6}] run data merge entity @s {CustomName:"{\"text\":\"There's something else\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=6}] run data merge entity @s {CustomName:"{\"text\":\"Il y a autre chose\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=6}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 1
 #-------------------------------
 
@@ -143,7 +143,7 @@ tag @s[scores={convState=4},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Gryffindor, I was! Had a great time at school, even if me education was cut a bit short. Still do, 'smatter of fact.\\n\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Gryffondor, j'étais ! J'ai passé de bons moments à l'école, même si mes études ont été un peu écourtées. C'est toujours le cas, en fait.\\n\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -175,29 +175,29 @@ tag @s[scores={convState=5},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Don't much like talkin' 'bout these things. He's a powerful dark wizard. What do yeh wan' ter know? \"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Je n'aime pas trop parler de ces choses-là. C'est un puissant sorcier noir. Que veux-tu savoir ? \"}"}
 # execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≤ Who is he?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≤ Qui est-il ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 6
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≤ What is his name?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≤ Comment s'appelle-t-il ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=2}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 7
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=3}] run data merge entity @s {CustomName:"{\"text\":\"≤ What happened to him?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=3}] run data merge entity @s {CustomName:"{\"text\":\"≤ Que lui est-il arrivé ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=3}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 8
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=4}] run data merge entity @s {CustomName:"{\"text\":\"≤ Where is he now?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=4}] run data merge entity @s {CustomName:"{\"text\":\"≤ Où est-il maintenant ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=4}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 10
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=5}] run data merge entity @s {CustomName:"{\"text\":\"≤ Who are his followers?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=5}] run data merge entity @s {CustomName:"{\"text\":\"≤ Qui sont ses disciples ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=5}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 11
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=6}] run data merge entity @s {CustomName:"{\"text\":\"There's something else I need to ask\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=6}] run data merge entity @s {CustomName:"{\"text\":\"Il y a autre chose que je dois demander\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=6}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 3
 #-------------------------------
 
@@ -222,7 +222,7 @@ tag @s[scores={convState=6},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" He was this wizard who went... bad. As bad as yeh coul' go. Worse. Worse than worse. Some say he died. This - this wizard, about twenty years ago now, started lookin' fer followers. Got 'em, too - some were afraid, some just wanted a bit o' his power, 'cause he was gettin' himself power, all right. Dark days. \"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" C'était un sorcier qui est devenu... mauvais. Aussi mauvais que possible. Pire. Pire que pire. Certains disent qu'il est mort. Ce sorcier, il y a une vingtaine d'années maintenant, a commencé à chercher des disciples. Il en a eu aussi - certains avaient peur, d'autres voulaient juste un peu de son pouvoir, parce qu'il gagnait lui-même du pouvoir, c'est vrai. Des jours sombres. \"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -254,7 +254,7 @@ tag @s[scores={convState=7},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"[{\"text\":\" Well - I don' like sayin' the name if I can help it. No one does. Oh well, s'pose someone's gotta tell yeh. It's \"},{\"text\":\"Voldemort\",\"color\":\"white\",\"italic\":\"true\"},{\"text\":\".\",\"color\":\"white\",\"bold\":\"false\"}]"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"[{\"text\":\" Eh bien, je n'aime pas prononcer le nom si je peux l'éviter. Personne ne le fait. Oh, eh bien, je suppose que quelqu'un doit te le dire. C'est \"},{\"text\":\"Voldemort\",\"color\":\"white\",\"italic\":\"true\"},{\"text\":\".\",\"color\":\"white\",\"bold\":\"false\"}]"}
 # execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -286,7 +286,7 @@ tag @s[scores={convState=8},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" He was takin' over. 'Course, some stood up to him - an' he killed 'em. Horribly. One o' the only safe places left was Hogwarts. Reckon Dumbledore's the only one You-Know-Who was afraid of. Didn't dare try takin' the school, not jus' then, anyway. He vanished after trying to kill Harry Potter. Wanted ter make a clean job of it, I suppose, or maybe he just liked killin' by then. But he couldn't do it.\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Il prenait le pouvoir. Bien sûr, certains lui ont tenu tête et il les a tués. Horriblement. L'un des seuls endroits sûrs qui restaient était Poudlard. Je pense que Dumbledore était le seul dont Tu-Sais-Qui avait peur. Il n'osait pas essayer de prendre l'école, pas à ce moment-là en tout cas. Il a disparu après avoir essayé de tuer Harry Potter. Il voulait faire un travail propre, je suppose, ou peut-être qu'il aimait juste tuer à ce moment-là. Mais il n'a pas pu le faire.\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -319,7 +319,7 @@ tag @s[scores={convState=9},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" That's how he got that scar on his forehead. That's what yeh get when a powerful, evil curse touches yeh. That's why Harry Potter is famous. No one ever lived after he decided ter kill 'em, no one except him, an' he'd killed some o' the best witches an' wizards of the age - the McKinnons, the Bones, the Prewetts - an' he was only a baby, an' he lived. Took him from the ruined house myself, on Dumbledore's orders.\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" C'est comme ça qu'il a eu cette cicatrice sur le front. C'est ce qu'on a quand on est touché par une malédiction puissante et maléfique. C'est pour ça qu'Harry Potter est célèbre. Personne n'a survécu après qu'il ait décidé de les tuer, personne sauf lui, et il avait tué certains des meilleurs sorciers et sorcières de l'époque - les McKinnon, les Bones, les Prewett - et il n'était qu'un bébé, et il a survécu. Je l'ai sorti de la maison en ruine moi-même, sur ordre de Dumbledore.\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -352,7 +352,7 @@ tag @s[scores={convState=10},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Good question. Disappeared. Vanished. Same night he tried ter kill Harry Potter. That's the biggest myst'ry, see he was gettin' more an' more powerful - why'd he go? Some say he died. Codswallop, in my opinion. Dunno if he had enough human left in him to die. Some say he's still out there, bidin' his time, like, but I don' believe it.\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Bonne question. Il a disparu. Il s'est volatilisé. La nuit même où il a essayé de tuer Harry Potter. C'est le plus grand mystère, il devenait de plus en plus puissant. Pourquoi est-il parti ? Certains disent qu'il est mort. C'est une connerie, à mon avis. Je ne sais pas s'il lui restait assez d'humanité pour mourir. Certains disent qu'il est toujours là, attendant son heure, mais je n'y crois pas.\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -384,7 +384,7 @@ tag @s[scores={convState=11},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Death Eaters we call 'em. They're evil wizards an' witches that practice the Dark Arts. When You-Know-Who vanished, some people who was on his side came back ter ours.\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Nous les appelons les Mangemorts. Ce sont des sorciers et sorcières maléfiques qui pratiquent les Arts Noirs. Lorsque Vous-Savez-Qui a disparu, certaines personnes qui étaient de son côté sont revenues dans notre camp.\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -417,7 +417,7 @@ tag @s[scores={convState=12},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" My dad raised me ... but he died jus' after I started school. Sorta had ter make me own way after that. Dumbledore was a real help, mind. Very kind ter me, he was ... He believed me that I was innocent when I was expelled after my third year. He talked ter Armando Dippet - he was headmaster at the time - an' convinced him ter give me the job of Gamekeeper and allow me ter remain a residen' of the school.\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Mon père m'a élevé... mais il est mort juste après que j'ai commencé l'école. J'ai dû me débrouiller seul après ça. Dumbledore m'a vraiment aidé, remarquez. Il était très gentil avec moi, il était... Il m'a cru innocent quand j'ai été renvoyé après ma troisième année. Il a parlé à Armando Dippet - il était directeur à l'époque - et l'a convaincu de me donner le poste de garde-chasse et de me permettre de rester résident de l'école.\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -449,7 +449,7 @@ tag @s[scores={convState=13},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Well I'm the keeper of keys and grounds. I tend ter the grounds of the school, and keep Hogwarts Castle safe. I tend ter the gardens, look after magical beasts on the school grounds, tend ter matters in the Forbidden Forest. I also help first year students like yerself on the boats ter the castle. Other than tha' I do special tasks for Dumbledore and professors at the school.\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Eh bien, je suis le gardien des clés et des terrains. Je m'occupe des terrains de l'école et je veille à la sécurité du château de Poudlard. Je m'occupe des jardins, je m'occupe des créatures magiques sur le terrain de l'école, je m'occupe des affaires dans la forêt interdite. J'aide également les étudiants de première année comme vous sur les bateaux du château. En dehors de cela, j'effectue des tâches spéciales pour Dumbledore et les professeurs de l'école.\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -482,7 +482,7 @@ tag @s[scores={convState=14},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" I'm a half giant. My mum was a giant and my dad was a human. She was one o' the las' ones in Britain. 'Course, I can' remember her too well ... she left, see. When I was abou' three. I am what I am, an' I'm not ashamed. 'Never be ashamed,' my ol' dad used ter say, 'there's some who'll hold it against you, but they're not worth botherin' with.' An' he was right.\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Je suis un demi-géant. Ma mère était un géant et mon père était un humain. Elle était l'une des dernières d'Angleterre. Bien sûr, je me souviens très bien d'elle... elle est partie, tu vois. Quand j'avais environ trois ans. Je suis ce que je suis, et je n'ai pas honte. « N'aie jamais honte », disait mon vieux père, « il y en a qui t'en voudront, mais ça ne vaut pas la peine de s'en soucier. » Et il avait raison.\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -518,17 +518,17 @@ tag @s[scores={convState=15},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Hello there! Lookin' to get into Diagon Alley? \\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Bonjour ! Vous souhaitez vous rendre sur le Chemin de Traverse ? \\n\"}"}
 # execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"±ˈˈ Yes I need to pick up my school supplies.\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"±ˈˈ Oui, je dois aller chercher mes fournitures scolaires.\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 16
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≥ Goodbye\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≥ Au revoir\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=2}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState -1
 #-------------------------------
 
@@ -552,7 +552,7 @@ tag @s[scores={convState=16},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"[{\"text\":\" Ah! A new Hogwarts student? Lemme introduce meself; I'm\\n\"},{\"text\":\" Rubeus Hagrid.\",\"color\":\"gold\",\"bold\":\"true\"},{\"text\":\" Keeper of keys and grounds at Hogwarts.\\n\\n\\n\\n\"}]"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"[{\"text\":\" Ah ! Un nouvel élève de Poudlard ? Laissez-moi me présenter ; je suis\\n\"},{\"text\":\" Rubeus Hagrid.\",\"color\":\"gold\",\"bold\":\"true\"},{\"text\":\" Gardien des clés et des terrains de Poudlard.\\n\\n\\n\\n\"}]"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -583,7 +583,7 @@ tag @s[scores={convState=17},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Diagon Alley is right behind that wall you see. All you have to do in order to open it is tap that brick there.\\n\\n Perfectly easy. \\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Le Chemin de Traverse se trouve juste derrière ce mur que vous voyez. Pour l'ouvrir, il vous suffit de toucher cette brique.\\n\\n C'est très simple. \\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -617,14 +617,14 @@ tag @s[scores={convState=18},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"[{\"text\":\" And when you enter, you should go to \"},{\"text\":\"Gringotts Wizarding Bank\",\"color\":\"gold\",\"bold\":\"true\"},{\"text\":\" and get some of that Muggle money exchanged into our wizarding currency. Ain't no safer place, not one. Except perhaps Hogwarts. Run by goblins. Speak to Griphook, he'll help you. \\n Well, good luck! See you at Hogwarts.\"}]"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"[{\"text\":\" Et quand vous entrez, vous devez aller à la\"},{\"text\":\"Banque des sorciers Gringotts\",\"color\":\"gold\",\"bold\":\"true\"},{\"text\":\" et échange une partie de cet argent moldu contre notre monnaie magique. Il n'y a pas d'endroit plus sûr, pas un seul. Sauf peut-être Poudlard. Gouverné par des gobelins. Parlez à Gripsec, il vous aidera. \\n Eh bien, bonne chance ! À bientôt à Poudlard.\"}]"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≥ Thanks for the help\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≥ Merci pour l'aide\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0,playerID=1}] run scoreboard players set hagrid p1convOverride 19
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0,playerID=2}] run scoreboard players set hagrid p2convOverride 19
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0,playerID=3}] run scoreboard players set hagrid p3convOverride 19
@@ -653,14 +653,14 @@ tag @s[scores={convState=19},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Just tap that brick there, by the dustbin to get the wall to open up!\\n\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Il suffit de taper sur cette brique là, près de la poubelle, pour que le mur s'ouvre !\\n\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≥ Ok thanks \"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≥ Ok merci \"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState -1
 #-------------------------------
 
@@ -687,7 +687,7 @@ tag @s[scores={convState=20},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" All right there? I remember you from Diagon Alley!\\n\\n\\n\\n\\n \"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Ça va ? Je me souviens de toi sur le Chemin de Traverse !\\n\\n\\n\\n\\n \"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -719,7 +719,7 @@ tag @s[scores={convState=21},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" C'mon, follow me - any more firs' years? Mind yer step, now! Firs' years follow me! Ye' all get yer firs' sight o' Hogwarts in a sec, jus' follow me to the boats.\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Allez, suivez-moi. Vous avez encore des élèves de première année ? Faites attention où vous mettez les pieds ! Les élèves de première année, suivez-moi ! Vous allez tous voir Poudlard pour la première fois dans une seconde, suivez-moi jusqu'aux bateaux.\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -750,7 +750,7 @@ tag @s[scores={convState=22},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Ye' all get yer firs' sight o' Hogwarts in a sec, jus' wait for everyone to arrive.\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Vous aurez tous un premier aperçu de Poudlard dans une seconde, attendez simplement que tout le monde arrive.\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -782,7 +782,7 @@ tag @s[scores={convState=23},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Jus' head up to the castle! You'll find Professor McGonagall there.\\n\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Allez au château ! Vous y trouverez le professeur McGonagall.\\n\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -813,7 +813,7 @@ tag @s[scores={convState=24},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Go on. I'll see ye' at Hogwarts.\\n\\n\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Vas-y, on se voit à Poudlard.\\n\\n\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -845,7 +845,7 @@ tag @s[scores={convState=25},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Tha's fine of yeh to ask. As a matter of fact, there is somethin' yeh could do for me. Yeh see, I'm lookin' after a demiguise. Well, I shoul' be. Lookin' after a demiguise can be tough when you can't see the bloomin' thing. Demiguises turn invisible, yeh know. And they can see the bloody future! Makes them very difficult to catch.\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" C'est bien de ta part de demander. En fait, il y a quelque chose que tu pourrais faire pour moi. Tu vois, je cherche un demi-déguisement. Enfin, je devrais. Chercher un demi-déguisement peut être difficile quand on ne voit pas cette fichue chose. Les demi-déguisements deviennent invisibles, tu sais. Et ils peuvent voir le futur sanglant ! Ce qui les rend très difficiles à attraper.\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -876,20 +876,20 @@ tag @s[scores={convState=26},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" I know he's around here, but he likes to hide from me. Maybe you can help me find him?\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Je sais qu'il est dans le coin, mais il aime se cacher de moi. Peut-être que tu peux m'aider à le retrouver ?\"}"}
 # execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"±ˈˈ I'll help find the demiguise\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"±ˈˈ Je vais aider à trouver le demiguise\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 27
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≤ What does a demiguise look like?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=2}] run data merge entity @s {CustomName:"{\"text\":\"≤ À quoi ressemble un demiguise ?\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=2}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState 28
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=3}] run data merge entity @s {CustomName:"{\"text\":\"≥ Sorry, I'm not interested\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=3}] run data merge entity @s {CustomName:"{\"text\":\"≥ Désolé, je ne suis pas intéressé\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=3}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState -1
 #-------------------------------
 
@@ -914,14 +914,14 @@ tag @s[scores={convState=27},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Tha's great. Alright, yeh just need to approach him carefully when yeh spot him. He might not trust yeh at first, but yeh'll win him over in the end. Once yeh've got his trust jus' give him a pat on the 'ead, and he should be fine. Won't run off again. \\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" C'est super. Très bien, tu dois juste t'approcher de lui avec précaution quand tu le repères. Il ne te fera peut-être pas confiance au début, mais tu finiras par le convaincre. Une fois que tu auras gagné sa confiance, donne-lui juste une petite tape sur la tête et il devrait aller bien. Il ne s'enfuira plus. \\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"ⁿ I'll do that\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"ⁿ Je vais faire ça\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] unless entity @p[tag=queingQuest] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] run scoreboard players set demiguiseDodge sharedQuests 1
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] unless entity @p[tag=queingQuest] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] run scoreboard players set demiguiseDodge p1Quests 1
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] unless entity @p[tag=queingQuest] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] run scoreboard players set demiguiseDodge p2Quests 1
@@ -956,7 +956,7 @@ tag @s[scores={convState=28},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" He's sort of like a grey monkey, inn't he? Grey fur, long arms. Big yellow eyes. Tha' is when he's not invisible.  \\n\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Il ressemble un peu à un singe gris, n'est-ce pas ? Une fourrure grise, de longs bras. De grands yeux jaunes. C'est quand il n'est pas invisible.  \\n\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -989,14 +989,14 @@ tag @s[scores={convState=29},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Ah, so yeh've tamed the beast? This one's given me a lot of trouble, so it's good to see tha' he trusts yeh at last. Yeh know Demiguise hair is used in invisibility potions. I might even 'ave some lyin' around. 'Ere, take these.\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Ah, alors tu as apprivoisé la bête ? Celle-ci m'a donné beaucoup de fil à retordre, alors c'est bon de voir qu'elle te fait enfin confiance. Tu sais que les cheveux de Demiguise sont utilisés dans les potions d'invisibilité. J'en ai peut-être même quelques-uns qui traînent. Tiens, prends ça.\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≥ Thanks (Accept: 5 x , 150 ≈)\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"≥ Merci (Accepter: 5 x , 150 ≈)\"}",Tags:["_____Normal_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] run tag @s add hasCompletedDemiguiseDodge
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] run scoreboard players set @s trackedQuestID 69
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState -1
@@ -1023,7 +1023,7 @@ tag @s[scores={convState=30},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Wilhelmina Grubbly-Plank wants my opinion? Alright. \\n\\n\\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Wilhelmina Grubbly-Plank veut mon avis ? Très bien. \\n\\n\\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -1055,7 +1055,7 @@ tag @s[scores={convState=31},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Well, yeh know. What she is describin' don't sound too serious to me. Mooncalves are shy creatures, and not exactly bright either. But they're sturdier than yeh think. \\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Eh bien, vous savez. Ce qu'elle décrit ne me semble pas trop sérieux. Les veaux lunaires sont des créatures timides, et pas vraiment intelligentes non plus. Mais ils sont plus robustes que vous ne le pensez. \\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
@@ -1087,14 +1087,14 @@ tag @s[scores={convState=32},tag=triggerOption,tag=!drawOptions] add trg
 ################################
 ##### Conversation Header ######
 ################################
-execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Just give it some time and tha' mooncalf will pull through. Tell her she's doin' everything she should be, and jus' keep goin'. \\n\\n\\n\"}"}
+execute if entity @s[tag=use] as 0-0-6-0-9 run data merge entity @s {CustomName:"{\"text\":\" Laisse-lui un peu de temps et la petite va s'en sortir. Dis-lui qu'elle fait tout ce qu'elle doit faire et continue. \\n\\n\\n\"}"}
 execute if entity @s[tag=use] run tag @s add longHeader
 
 ################################
 ##### Conversation Options #####
 ################################
 #-------------------------------
-execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"±ˈˈ I'll tell her that\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
+execute as @s[tag=use] as @e[type=armor_stand,limit=1,scores={con=1}] run data merge entity @s {CustomName:"{\"text\":\"±ˈˈ Je lui dirai que\"}",Tags:["_____Return_____","_____click_____","convOption","i"]}
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] run tag @s add hasSpokenToHagridAboutSickCreature
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] run scoreboard players set @s trackedQuestID 55
 execute as @s[tag=trg] as @e[type=armor_stand,limit=1,scores={con=1}] as @s[tag=convSelected] as @p[tag=activePlayer,scores={tmp=0}] store success score @s tmp run scoreboard players set @s convState -1

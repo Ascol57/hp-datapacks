@@ -590,7 +590,7 @@ execute as @s[scores={cutSceneTimer=0}] run stopsound @s * minecraft:custom.musi
 
 # ¤McGonagall:¤ Welcome to Hogwarts.
 execute as @s[scores={cutSceneTimer=-560},tag=cutsceneLeader] as @e[tag=sortingCeremonyMcGonagall,limit=1] at @s run playsound minecraft:custom.voices.voice4 master @a ~ ~ ~ 1 1 0
-execute as @s[scores={cutSceneTimer=-560..-450}] run title @s actionbar ["",{"text":""},{"text":"","color":"dark_gray"},{"text":"   "}]
+execute as @s[scores={cutSceneTimer=-560..-450}] run title @s actionbar ["",{"text":""},{"text":"","color":"dark_gray"},{"text":"   "}]
 execute as @s[scores={cutSceneTimer=-560},tag=cutsceneLeader] as @e[tag=sortingCeremonyMcGonagall,limit=1] run function hp:npc/update_npc_head_expression
 execute as @s[scores={cutSceneTimer=-553},tag=cutsceneLeader] as @e[tag=sortingCeremonyMcGonagall,limit=1] run function hp:npc/update_npc_head_neutral
 execute as @s[scores={cutSceneTimer=-549},tag=cutsceneLeader] as @e[tag=sortingCeremonyMcGonagall,limit=1] run function hp:npc/update_npc_head_expression
